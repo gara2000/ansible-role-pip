@@ -1,9 +1,6 @@
 ---
-- name: Update cache
-  apt: 
-    update_cache: yes 
-
 - name: Install pip
   apt:
     name: "{{ pip_package }}"
     state: present
+    update_cache: yes 
